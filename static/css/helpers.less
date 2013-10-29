@@ -1,0 +1,59 @@
+.group:before, .group:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.group:after {
+  clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.group {
+  *zoom: 1;
+}
+
+.focusable:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.focusable, .focusable:active {
+  outline: 0;
+}
+
+.pseudo (@display:block) {
+  content: '';
+  display: @display;
+}
+
+.absolute (@xy) {
+  position: absolute;
+  left: @xy;
+  top: @xy;
+}
+
+.absolute (@x, @y) {
+  position: absolute;
+  left: @x;
+  top: @y;
+}
+
+.pointer-events (@val:all) {
+  pointer-events: @val;
+  ms-pointer-events: @val;
+}
+
+.max-size(@square){
+  max-width: @square;
+  max-height: @square;
+}
+
+.max-size(@width, @height){
+  max-width: @width;
+  max-height: @height;
+}

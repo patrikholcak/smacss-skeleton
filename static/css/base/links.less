@@ -1,0 +1,26 @@
+a[href] {
+
+  &:hover {
+  }
+
+  &:active {
+  }
+
+  &:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+}
+
+
+
+//**
+// * Target only Firefox via http://stackoverflow.com/questions/952861/targeting-only-firefox-with-css
+//
+
+@-moz-document url-prefix() {
+  a:focus, .focusable {
+    outline: none !important;
+  }
+}
